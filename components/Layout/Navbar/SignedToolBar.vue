@@ -2,11 +2,15 @@
   <div class="grid grid-cols-3 gap-4">
     <div class="text-white text-right">{{ username }}</div>
     <div>
-      <button class="bg-white text-blue-500 rounded px-2">Share a movie</button>
+      <button
+        class="bg-white text-blue-500 rounded px-2 focus:outline-none focus:border-blue-700"
+      >
+        Share a movie
+      </button>
     </div>
     <div>
       <button
-        class="bg-white text-blue-500 rounded px-2 text-left"
+        class="bg-white text-blue-500 rounded px-2 text-left focus:outline-none focus:border-blue-700"
         @click="logout"
       >
         Logout
@@ -26,6 +30,9 @@ export default {
       localStorage.removeItem("username");
       this.$store.commit("logout");
     },
+    directToShareMovie(){
+
+    }
   },
 };
 </script>

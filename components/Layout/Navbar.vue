@@ -21,7 +21,7 @@ export default {
   },
   mounted() {
     const username = localStorage.getItem("username");
-    if (this.username) this.$store.commit("login", this.username);
+    if (username) this.$store.commit("login", username);
   },
 };
 </script>
