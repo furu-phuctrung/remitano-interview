@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between bg-blue-400 shadow-md py-2 px-32 text-white">
+  <div class="flex justify-between bg-blue-400 shadow-md py-2 lg:px-32 px-10 text-white">
     <div class="text-2xl font-bold">Funny Movie</div>
     <div class="flex flex-col justify-center">
       <template v-if="username">
