@@ -21,7 +21,12 @@ export default {
   },
   mounted() {
     const username = localStorage.getItem("username");
-    if (username) this.$store.commit("login", username);
+    const urls = localStorage.getItem("urls");
+    const initalState = {
+      username: username ?? "",
+      urls: urls ? urls.split(";") : [],
+    };
+    this.$store.commit("init", initalState);
   },
 };
 </script>

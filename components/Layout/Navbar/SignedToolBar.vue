@@ -4,6 +4,7 @@
     <div>
       <button
         class="bg-white text-blue-500 rounded px-2 focus:outline-none focus:border-blue-700"
+        @click="directToShareMovie"
       >
         Share a movie
       </button>
@@ -30,9 +31,9 @@ export default {
       localStorage.removeItem("username");
       this.$store.commit("logout");
     },
-    directToShareMovie(){
-
-    }
+    directToShareMovie() {
+      this.$nuxt.$router.push("/share-movie");
+    },
   },
 };
 </script>
